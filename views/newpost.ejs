@@ -1,0 +1,46 @@
+<% include ./partials/header %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">New post</h5>
+            <form class="form-signin" action="/posts" method="POST" enctype="multipart/form-data">
+              <div class="form-label-group">
+                <input type="text" class="form-control" name="head" placeholder="Subject" required autofocus>
+                <label for="inputEmail">Subject</label>
+              </div>
+              <div>
+                <input type="text" class="form-control" name="subhead" placeholder="Subhead" required autofocus>
+                <label for="inputEmail">Subhead</label>
+              </div>
+
+              <div class="form-label-group">
+                <textarea class="form-control" id="description" name="desc" rows="3"></textarea>
+                <label for="description">Description</label>
+              </div>
+              <div class="form-label-group">
+                <input type="date" id="inputPassword" class="form-control" name="due_date" placeholder="Details" required>
+                <label for="due_date">When is this worksheet due?</label>
+              </div>
+              <div class="custom-file" id="file-container">
+                  <input type="file" name="worksheet" class="custom-file-input" id="customFile">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                  <label for="customFile">Format: PDF</label>
+                </div>
+                <br>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Post</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  body {
+    background: #007bff;
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+  }
+</style>

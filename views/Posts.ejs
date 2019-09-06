@@ -1,0 +1,31 @@
+<% include ./partials/header %> 
+<link rel="stylesheet" href="/stylesheets/posts.css">
+<div style="padding:15px 90px">
+    <header class="jumbotron">
+        <h1> Welcome to Posts</h1>
+        <p>News, Tests, Homework, Past Papers by Teachers</p>
+        <% if(currentUser) { %><a id="newpost" class="btn btn-primary btn-large" href="/posts/new">Add New Post</a><% } %>
+    </header>
+        
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% posts.forEach(function(post){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="border border-black rounded">
+                <div class="thumbnail">
+                   <h4><%= post.head %></h4>
+                   <div class="caption">
+                       <%= post.subhead %>
+                   </div>
+                   <p>
+                       <a href="/posts/<%= post._id %>" class="btn btn-primary">Details</a>
+                   </p>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+
+    </div>
+</div>
+</div>
+
+ <% include ./partials/footer %>

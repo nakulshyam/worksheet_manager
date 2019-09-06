@@ -1,0 +1,20 @@
+h4,
+h1,
+p {
+	color: white;
+}
+
+.thumbnail {
+	margin-top: 1.5rem;
+}
+
+.border {
+	margin-bottom: 1.5rem;
+}
+
+body {
+	background: #0ca2f2;
+}
+.jumbotron {
+	background: #42adf5;
+}

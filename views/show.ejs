@@ -1,0 +1,45 @@
+<% include ./partials/header %>
+<link rel="stylesheet" href="/stylesheets/show.css">
+<body>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-7">
+            <embed id="worksheet" src=<%= `/posts/worksheet/${post.worksheet}` %> type="application/pdf">
+        </div>
+        <div class="col">
+            <div id="worksheet-info" >
+                    <div class="card text-white bg-dark mb-3" style="max-width: 200rem; height: 80vh">
+                    <div class="card-header">
+                        Worksheet
+                        </div>
+                        <div class="card-body">
+                        <h5 class="card-title"><%= post.head %></h5>
+                        <p id="description" class="card-text"><%= post.desc %></p>
+                        
+                        <a href=<%= `/posts/worksheet/${post.worksheet}` %> class="btn btn-primary">Open Worksheet</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                        <%= post.upload_date %>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <% if (currentUser && post.teacher.id.equals(currentUser._id)) { %>
+        <form id="delete-form" action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+            <div class="delete-button">
+                <button class="btn btn-xs btn-danger">Delete</button>
+            </div>
+        </form>
+        <form id="delete-form" action="/posts/<%= post._id %>/edit" method="GET">
+            <div class="delete-button">
+                <button class="btn btn-xs btn-warning">Edit</button>
+            </div>
+        </form> 
+    <% } %>
+
+</div>
+</body>
+
+</html>
+
+<% include ./partials/footer %>

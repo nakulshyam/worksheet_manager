@@ -1,0 +1,59 @@
+h4,
+h1,
+p {
+	color: white;
+	left: 0;
+	line-height: 200px;
+	margin-top: -100px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 100%;
+}
+
+.thumbnail {
+	margin-top: 1.5rem;
+}
+
+body {
+	background: #265875;
+}
+
+.jumbotron {
+	background: #42adf5;
+}
+
+.delete-button {
+	margin-left: 80.5rem;
+	margin-top: 1rem;
+}
+/* 
+#worksheet-container {
+	padding: 200px;
+	height: 100vh;
+	justify-content: center;
+	z-index: 1;
+}
+*/
+#worksheet {
+	height: 90vh;
+	align-self: center;
+	justify-self: center;
+	width: 100%;
+	overflow-y: hidden;
+}
+
+#worksheet-info {
+	height: 70vh;
+	line-height: 10px;
+}
+
+#info-text {
+	height: 100%;
+}
+
+#description {
+	padding: 0 50px;
+	text-align: left;
+	line-height: 20px;
+}
